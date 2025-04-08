@@ -1,0 +1,24 @@
+# config.yaml
+
+# Path to the dataset
+path: ${DATASET_PATH}  # Base path to the split dataset
+
+# Train and validation data paths
+train: ${TRAIN_PATH}
+val: ${VAL_PATH}
+
+# Names of classes in the dataset
+names:
+  0: anaconda
+  1: cobra_mk3
+  2: diamondback_explorer
+  3: python
+
+# Data Augmentation settings
+augment:
+  flip: true           # Enable horizontal flipping
+  scale: 0.5           # Random scaling factor
+  hsv_h: 0.015         # Hue shift
+  hsv_s: 0.7           # Saturation shift
+  hsv_v: 0.4           # Brightness shift
+  degrees: 360         # Allow random rotation 360 degrees, because spaceships spin
